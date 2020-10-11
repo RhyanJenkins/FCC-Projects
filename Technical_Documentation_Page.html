@@ -1,3 +1,55 @@
+<style>
+header{
+  text-decoration: underline;
+}
+#navhead{
+  font-size: 20px;
+  border: solid;
+  height: 30px;
+  text-align: center;
+  margin: 0px 50px 0px 50px;
+}
+/*#navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 0px 0px 0px;
+  border: solid;
+  position: fixed;
+}*/
+body{ 
+  min-width: 290px;
+  line-height: 1.5;
+  font-family: "Open Sans";
+}
+div{
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  border-right: solid;
+  border-color: black;
+  line-height: 2.0;
+  font-size: 18px;
+}
+#main-doc{
+  position: absolute;
+  margin-left: 450px;
+  pading: 20px;
+  margin-bottom: 110px;
+  font-size: 25px;
+}
+.wrap{
+  font-size: 25px;
+}
+ @media (max-height: 800px) {p{font-size: 15px;}}
+.main-section{
+  text-align: justify;
+}
+
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +57,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+  <div>
 <nav id="navbar">
-    <header>Applied Accessibility Explained</header>
+  <header id="navhead">Applied Accessibility Explained</header>
       <ul>
         <li>
           <a class="nav-link" 
-            href="#Introduction_to_Applied_Accessibility">Introduction to Applied Accessibility</a>
+           href="#Introduction_to_Applied_Accessibility">Introduction to Applied Accessibility</a>
         </li>
         <li>
           <a class="nav-link"
@@ -49,33 +102,57 @@
             href="#Avoid_colorblindness_issues">Avoid colorblindness issues</a>
         </li>
 </nav>
+  </div>
 <body>
     <main id="main-doc">
         <section class="main-section" id="Introduction_to_Applied_Accessibility">
             <header>Introduction to Applied Accessibility</header>
-            <p></p>
+            <p>
+              "Accessibility" generally means having web content and a user interface that can be understood, navigated, and interacted with by a broad audience. This includes people with visual, auditory, mobility, or cognitive disabilities.
+Websites should be open and accessible to everyone, regardless of a users abilities or resources. Some users rely on assistive technology, such as a screen reader or voice recognition software. Other users may be able to navigate through a site only using a keyboard. Keeping the needs of various users in mind when developing your project can go a long way towards creating an open web. 
+            </p>
         </section>
         <section class="main-section" id="Adding_a_text_alternative_to_images">
                 <header>Adding a text alternative to images</header>
-                <p>
-                    <code> <img src="importantLogo.jpeg" alt="Company logo"> </code>
+                <p>|alt| text describes the content of the image and provides a text-alternative for it. This helps in cases where the image fails to load or can't be seen by a user. It's also used by search engines to understand what an image contains to include it in search results. For example:
+                   <code> <img src="importantLogo.jpeg" alt="Company logo"> </code>
                 </p>
+          <p>
+            People with visual impairments rely on screen readers to convert web content to an audio interface. They won't get information if it's only presented visually. For images, screen readers can access the |alt| attribute and read it's contents to deliver key information. Good |alt| text provides the reader a brief description of the image. You should always include and |alt| attribute on your image. Per HTML5 specifications, this is now considered mandatory.
+          </p>
         </section>
         <section class="main-section" id="Use_headings_to_show_hierarchial_relationship_of_content">
                 <header>Use headings to show hierarchial relationship of content</header>
-                <p></p>
+                <p>
+                  Headings (|h1| through |h6| elements) are workhorse tags that help provide structure and labeling to you content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means it is important for the headings tag in your markup to have semantic meaning and relate to each other, not be picked merely for their size values.
+
+*Semantic meaning means that the tag you use around content indicates the type of information it contains.
+
+The heading tags in a webpage need to go in order and indicate the hierarchical relationships of your content. Headings with equal (or higher) rank start new implied sections, headings with lower rank start subsections of the previous one.
+One final point, each page should always have one (and only one) |h1| element, which is the main subject of your content. This and other headings are used in part by search engines to understand the topic of the page. 
+                </p>
         </section>
         <section class="main-section" id="Using_the_main_element">
                 <header>Using the main element</header>
-                <p></p>
+                <p>
+                  The |main| element is used to wrap the main content, and there should only be one per page. It's meant to surround the information that’s related to the central topic of your page. It's not meant to include items that repeat across pages, like navigation links or banners.
+The |main| tag also has an embedded landmark feature that assistive technology can use to quickly navigate tp the main content. If you've ever seen a "Jump to main content" link at the top of a page, using main tag automatically gives assistive devices that functionality. 
+                </p>
         </section>
         <section class="main-section" id="Wrap_content_in_the_article_element">
                 <header>Wrap content in the article element</header>
-                <p>
+                <p>|article| is another one of the new HTML5 elements that adds semantic meaning to your markup. |article| is a sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog entries, forum post, or news articles. 
+Determining whether content can stand alone is usually a judgement call, but there are a couple of simple test you can use:
                     <ol>
                         <li>If you removed all surrounding context, would that content still make sense?</li>
                         <li>For text, would the content hold up if it were in an RSS feed?</li> 
-                    </ol>
+                   </ol>
+          </p>
+          <p>
+Remember that folks using assistive technologies rely on organized, semantically meaningful mark up to better understand your work.
+
+Note about |section| and |div|
+The |section| element is also new with HTML5 and has a slightly different semantic meaning than |article|. An |article| is for standalone content, and a |section| is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the |article|, then each chapter is a |section|
                 </p>
         </section>
         <section class="main-section" id="Making_screen_navigation_easier">
@@ -83,26 +160,37 @@
                 <p>
                     <ol>
                         <li>Header Landmark</li>
+                      <p>The next HTML5 element that adds semantic meaning ad improves accessibility to the |header| tag. It's used to wrap introductory info or navigation links for it's parent tag and works well around content that's repeated at the top of multiple pages. 
+|header| shares the embedded landmark feature you saw with |main|, allowing assistive technologies to quickly navigate to that content.
+Note: The |header| is meant for use in the |body| tag of you HTML document. This is different than the |head| element, which contains the page's title, meta information, ect.</p>
                         <li>Nav Landmark</li>
+                      <p>The |nav| element is another HTML5 item with the embedded landmark feature for easy screen reader navigation. This tag is meant to wrap around the main navigation links in your page.
+If there are repeated site links at the bottom of the page, it isn't necessary to mark up those with a |nav| tag as well. Using a |footer| is sufficient. </p>
                         <li>Footer Landmark</li>
+                      <p>Similar to |header| and |nav|, the |footer| element has a built-in landmark feature that allows assistive devices to quickly navigate it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of the page. </p>
                     </ol>
                 </p>
         </section>
         <section class="main-section" id="Improve_accessibility_of_audio">
                 <header>Improve accessibility of audio</header>
-                <p>
+                <p>HTML5's |audio| element gives semantic meaning when it wraps sound or audio stream content in you markup. Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript. The |audio| tag supports the |controls| attribute. This shows the browser default play, pause, and other controls and supports keyboard functionality. This is a boolean attribute, meaning it doesn’t need a value, it's presence on the tag turns the setting on. For example:
                     <code> 
                         <audio id="meowClip" controls>
                             <source src="audio/meow.mp3" type="audio/mpeg"/>
                             <source src="audio/meow/ogg" type="audio/ogg"/>
                         </audio>
                     </code>
+          </p>
+          <p>
+            Note: Multimedia content usually has both visual and auditory components. It needs synchronized captions and a transcript so users with visual and/or auditory impairments can access it. Generally, a web developer is not responsible for creating the captions or transcript, but needs to know to include them. 
                 </p>
-                <p></p>
         </section>
         <section class="main-section" id="Improve_form_field_accessibility">
             <header>Improve form field accessibility</header>
             <p>
+              Improving accessibility with semantic HTML markup applies to using both appropriate tag names as well as attributes.
+The |label| tag wraps the text for a specific form control item, usually the name or label for a choice. This ties meaning to the item and makes the form more readable. The |for| attribute on a |label| tag explicitly associates that |label| with the form control and is used by screen readers.
+The value of the |for| attribute must be the same as the value of the |id| atrtibute of the form control. For example:
                 <code>
                     <form>
                         <label for="name">Name:</label>
@@ -114,6 +202,9 @@
         <section class="main-section" id="Add_an_accessible_date_picker">
             <header>Add an accessible date picker</header>
             <p>
+              Forms often include the |input| field, which can be used to create several different form controls. The |type| attribute on this element indicates what kind of input will be created.
+You may have noticed the |text| and |submit| input types in prior challenges, and HTML5 introduced an option to specify a |date| field. Depending on browser support, a date picker shows up in the |input| field when it's in focus, which makes filling in a form easier for all users.
+For older browsers, the type will default to |text|, so it helps to show users the expected date format in the label or a placeholder text just in case. For example: 
                 <code>
                     <label for="input1">Enter a date:</label>
                     <input type="date" id="input1" name="input1">
@@ -122,11 +213,15 @@
         </section>
         <section class="main-section" id="Avoid_colorblindness_issues">
                 <header>Avoid colorblindness issues</header>
-                <p></p>
-                <p></p>
+                <p>There are various forms of colorblindness. These can range from a reduced sensitivity to a certain wavelength of light to the inability to see color at all. The most common form is a reduced sensitivity to detect greens.
+Note: Some online color picking tools include visual simulations of how colors appear for different types of colorblindness
+          </p>
+           <p>
+             For example, if two similar green colors are the foreground and background color of you content, a colorblind user may not be able to distinguish them. Close colors can be thought of as neighbors on the color wheel, and those combinations should be avoided when conveying important information. 
+             Note: Some online color picking tools include visual simulations of how colors appear for different types of colorblindness
+          </p>
         </section>
     </main>
-
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

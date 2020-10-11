@@ -1,21 +1,135 @@
+ <style>
+ /*#navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 175px;
+}*/
+body {
+  margin-top: 100px;
+  background-image: url("https://i.pinimg.com/originals/8c/86/f7/8c86f78b08219bccf4529871d920cc5d.png")
+}
+
+#welcome-section {
+  color: black;
+  width: 30%;
+  margin: 100px;
+  font-weight: bold;
+  font-size: 25px;
+  height: 100vh;
+}
+#about {
+  font-size: 25px;
+  text-align: left;
+}
+a.button {
+  background: #B1B1B1;
+  color: #FFF;
+  font-weight: bold;
+  border-width: 4px;
+  border-style: solid;
+  border-top-color: #DFDFDF;
+  border-right-color: #666;
+  border-bottom-color: #333;
+  border-left-color: #858585;
+}
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  border-bottom: 3px solid rgb(204,204,204);
+  overflow: hidden;
+  text-align: center;
+}
+
+#navbar li {
+  float: left;
+  /*width: 12em;
+}
+/*#navbar li:last-of-type a {
+  border-right: 1px dashed #999;*/
+}
+
+#navbar a {
+  width: 12em; 
+  display: block;
+  border: 3px solid rgb(204,204,204);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  margin-right: 5px;  
+  background-color: black;  
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*background-repeat: no-repeat;
+  background-position: 0 2px;*/
+}
+
+#navbar a:hover {
+  font-weight: bold;
+  background-color: #B2F511;
+  background-position: 3px 50%;
+}
+@media (max-height: 800px) {p{font-size: 25px;}};
+
+/*#navbar a {
+  color: #000;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px dashed #999;
+  padding: 7px 5px 7px 30px;
+  display: block;
+  background-color: #E7E7E7;
+  
+}*/
+
+ </style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-</head>
+</head>  
+  <nav>
+  <ul id="navbar">
+    <li><a href="#welcome-section" class="button">Home</a></li>
+    <li><a href="#about" class="button">About</a></li>
+    <li><a href="#projects" class="button">Projects</a></li>
+    <li><a href="#contact" class="button">Contact</a></li>
+    
+   
+  </ul>
+  </nav>
 <body>
     <section id="welcome-section">
-        <h1>Rhyan Jenkins</h1>
-        <p>Front End Web Developer</p>
+        <h1>Hi I'm Rhyan.</h1>
+        <h2>Designer. Developer. Person.</h2>
+      <p> Multidisciplinary designer who enjoys the struggle of learning new things, failing at those new things, and getting back up to try again. Less sociable in real life. Check out my free code camp profile <a href="https://www.freecodecamp.org/rhyanjenks" target="_blank" id="profile-link">Here.</a>        
+      </p>
     </section>
     <section id="projects">
-        <h2 class="project-tile">
+        <h3 class="project-tile">
             Tribute Page Project 
                 <a href="https://codepen.io/Rhyansolis/full/PoPjGOd">Tribute to Malcolm X</a>
-        </h2>
+        </h3>
     </section>
+    <section id="about">
+      <h1>I work hard so you don't have to</h1>
+      <p>I'm Rhyan Jenkins, but you can call me Rhy. Originally from Texas, I relocated to Dayton Ohio near the begininng of March. Since then I've been honning my skills and devoring everything I could get my hands on regarding programing and designing websites, games, and apps. I strive to find out what my customers whant and need and pride myself on delivering them their dream product. Have a project in mind? Lets talk. </p>
+      
+  </section>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
