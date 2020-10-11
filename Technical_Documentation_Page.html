@@ -1,13 +1,43 @@
 <style>
 header{
   text-decoration: underline;
+  font-size: 50px;
+}
+#box {
+  width: 400px;
+  background-color: black;
+  /*height: 100%; */
 }
 #navhead{
   font-size: 20px;
-  border: solid;
+  text-decoration: none;
+  border: none;
   height: 30px;
   text-align: center;
   margin: 0px 50px 0px 50px;
+  color: white;
+  background-color: black;
+  
+}
+.mainNav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mainNav a {
+  color: #000;
+  font-size: 20px; 
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px dashed #999;
+  padding: 7px 5px;
+  display: block;
+  background-color: black;
+}
+.mainNav a:hover {
+  font-weight: bold;
+  background-color: #B2F511;
+  background-position: 3px 50%;
 }
 /*#navbar{
   display: flex;
@@ -21,6 +51,7 @@ body{
   min-width: 290px;
   line-height: 1.5;
   font-family: "Open Sans";
+  background-color:;
 }
 div{
   position: fixed;
@@ -32,6 +63,17 @@ div{
   border-color: black;
   line-height: 2.0;
   font-size: 18px;
+}
+a#button {
+  background: B1B1B1;
+  color: #FFF;
+  font-weight: bold;
+  border-width: 4px;
+  border-style: solid;
+  border-top-color: #DFDFDF;
+  border-right-color: #666;
+  border-bottom-color: #333;
+  borer-left-color: #858585;
 }
 #main-doc{
   position: absolute;
@@ -57,48 +99,48 @@ div{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-  <div>
+  <div id="box">
 <nav id="navbar">
   <header id="navhead">Applied Accessibility Explained</header>
-      <ul>
+      <ul class="mainNav">
         <li>
-          <a class="nav-link" 
+          <a class="nav-link" id="button"
            href="#Introduction_to_Applied_Accessibility">Introduction to Applied Accessibility</a>
         </li>
         <li>
-          <a class="nav-link"
+          <a class="nav-link" id="button"
             href="#Adding_a_text_alternative_to_images">Adding a text alternative to images</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
              href="#Use_headings_to_show_hierarchial_relationship_of_content">Use headings to show hierarchial relationship of content</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Using_the_main_element">Using the main element</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Wrap_content_in_the_article_element">Wrap content in the article element</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Making_screen_navigation_easier">Making screen navigation easier</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Improve_accessibility_of_audio">Improve accessibility of audio</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Improve_form_field_accessibility">Improve form field accessibility</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Add_an_accessible_date_picker">Add an accessible date picker</a>
         </li>
         <li>
-            <a class="nav-link"
+            <a class="nav-link" id="button"
             href="#Avoid_colorblindness_issues">Avoid colorblindness issues</a>
         </li>
 </nav>
