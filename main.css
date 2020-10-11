@@ -1,0 +1,17 @@
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}   
+#header-img {
+    width: 200px;
+    border-style: dashed;
+}
+#nav-bar {
+    width: 200px;
+    border-style: solid; 
+}
+h1 {
+    color: purple;
+}
+@media(max-height: 800px) {p{font-size: 10px;}}

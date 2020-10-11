@@ -1,0 +1,65 @@
+
+
+<style>
+h1{
+  text-align: center;
+}
+#description{
+  text-align: center;
+}
+</style>
+<body>
+<h1 id="title">Survey Form for favortie house pet</h1>
+<p id="description"><strong>This is a brief survery to find out where to branch out our pet food services for our consumers.</strong></p>
+<form id="survey-form">
+<label id="name-label">First and Last name</label>
+  <input type="name" placeholder="name" id="name" required>
+  <br>
+  <label id="email-label">Email</label>
+  <input type="email" placeholder="email" id="email" required>
+  <br>
+  <label id="number-label">Number of Pets</label>
+  <input type="number" min=0 max=9999 placeholder="number" id="number" required>
+  <br>
+<label for="dropdown">Choose your status:</label> 
+<select id="dropdown" required>
+  <option value="">--Please Select An Option--</option>
+  <option value="member">Member</option>
+  <option value="guest">Guest</option>
+  <option value="member family">Member Family</option>
+  <option value="employee">Employee</option>
+</select>
+<br>
+<label for="other">Where did you hear about the survey from:</label>
+<textarea id="other" name="other"
+          row=5 col=33>
+</textarea>
+<br>
+<h2>Please select any animals you have in your household. If you have a dog or a cat; please select if they are either indoor,outdoor, or both.</h2>
+<div>
+<label for="dog"><input id="dog"value="dog"type="checkbox"name="dog">Dog</label>
+  <br>
+  <label for="select one">Select if:</label>
+  <input id="indoor"value="indoor"type="radio"name="indoor-outdoor-both">Indoor</label>
+  <input id="outdoor"value="outdoor"type="radio"name="indoor-outdoor-both">Outdoor</label>
+<input id="both"value="both"type="radio"name="indoor-outdoor-both">Both</label>
+  <br>
+<label for="cat"><input id="cat"value="cat"type="checkbox"name="cat">Cat</label>
+  <br>
+  <label for="select one">Select if:</label>
+  <input id="cat-indoor"value="cat-indoor"type="radio"name="cat-indoor-outdoor-both">Indoor</label>
+  <input id="cat-outdoor"value="cat-outdoor"type="radio"name="cat-indoor-outdoor-both">Outdoor</label>
+<input id="cat-both"value="cat-both"type="radio"name="cat-indoor-outdoor-both">Both</label>
+  </div>
+<label for="snake"><input id="snake"value="snake"type="checkbox"name="snake">Snake</label>
+<label for="rodent"><input id="rodent"value="rodent"type="checkbox"name="rodent">Rodent</label>
+<label for="goldfish"><input id="goldfish"value="goldfish"type="checkbox"name="goldfish">Goldfish</label>
+<label for="spider"><input id="spider"value="spider"type="checkbox"name="spider">Spider</label>
+<label for="bird"><input id="bird"value="bird"type="checkbox"name="bird">Bird</label>
+<label for="lizard"><input id="lizard"value="lizard"type="checkbox"name="lizard">Four-legged Lizard</label>
+<br>
+<p>Thank you for taking the time out to finish this survey!</p>
+<button type="submit" id="submit">Submit</button>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</form>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<nav id="navbar">
+    <header>Applied Accessibility Explained</header>
+      <ul>
+        <li>
+          <a class="nav-link" 
+            href="#Introduction_to_Applied_Accessibility">Introduction to Applied Accessibility</a>
+        </li>
+        <li>
+          <a class="nav-link"
+            href="#Adding_a_text_alternative_to_images">Adding a text alternative to images</a>
+        </li>
+        <li>
+            <a class="nav-link"
+             href="#Use_headings_to_show_hierarchial_relationship_of_content">Use headings to show hierarchial relationship of content</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Using_the_main_element">Using the main element</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Wrap_content_in_the_article_element">Wrap content in the article element</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Making_screen_navigation_easier">Making screen navigation easier</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Improve_accessibility_of_audio">Improve accessibility of audio</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Improve_form_field_accessibility">Improve form field accessibility</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Add_an_accessible_date_picker">Add an accessible date picker</a>
+        </li>
+        <li>
+            <a class="nav-link"
+            href="#Avoid_colorblindness_issues">Avoid colorblindness issues</a>
+        </li>
+</nav>
+<body>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_Applied_Accessibility">
+            <header>Introduction to Applied Accessibility</header>
+            <p></p>
+        </section>
+        <section class="main-section" id="Adding_a_text_alternative_to_images">
+                <header>Adding a text alternative to images</header>
+                <p>
+                    <code> <img src="importantLogo.jpeg" alt="Company logo"> </code>
+                </p>
+        </section>
+        <section class="main-section" id="Use_headings_to_show_hierarchial_relationship_of_content">
+                <header>Use headings to show hierarchial relationship of content</header>
+                <p></p>
+        </section>
+        <section class="main-section" id="Using_the_main_element">
+                <header>Using the main element</header>
+                <p></p>
+        </section>
+        <section class="main-section" id="Wrap_content_in_the_article_element">
+                <header>Wrap content in the article element</header>
+                <p>
+                    <ol>
+                        <li>If you removed all surrounding context, would that content still make sense?</li>
+                        <li>For text, would the content hold up if it were in an RSS feed?</li> 
+                    </ol>
+                </p>
+        </section>
+        <section class="main-section" id="Making_screen_navigation_easier">
+                <header>Making screen navigation easier</header>
+                <p>
+                    <ol>
+                        <li>Header Landmark</li>
+                        <li>Nav Landmark</li>
+                        <li>Footer Landmark</li>
+                    </ol>
+                </p>
+        </section>
+        <section class="main-section" id="Improve_accessibility_of_audio">
+                <header>Improve accessibility of audio</header>
+                <p>
+                    <code> 
+                        <audio id="meowClip" controls>
+                            <source src="audio/meow.mp3" type="audio/mpeg"/>
+                            <source src="audio/meow/ogg" type="audio/ogg"/>
+                        </audio>
+                    </code>
+                </p>
+                <p></p>
+        </section>
+        <section class="main-section" id="Improve_form_field_accessibility">
+            <header>Improve form field accessibility</header>
+            <p>
+                <code>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </form>
+                </code>
+            </p>
+        </section>
+        <section class="main-section" id="Add_an_accessible_date_picker">
+            <header>Add an accessible date picker</header>
+            <p>
+                <code>
+                    <label for="input1">Enter a date:</label>
+                    <input type="date" id="input1" name="input1">
+                </code>
+            </p>
+        </section>
+        <section class="main-section" id="Avoid_colorblindness_issues">
+                <header>Avoid colorblindness issues</header>
+                <p></p>
+                <p></p>
+        </section>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
